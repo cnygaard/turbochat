@@ -1,0 +1,10 @@
+/* CSS declarations go here */
+p {
+	font-family: verdana;
+}
+
+input#message
+{
+	width: 400px;
+	font-family: verdana;
+}

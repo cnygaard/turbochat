@@ -1,0 +1,43 @@
+<head>
+  <title>Lens chat</title>
+  <script src="http://simplewebrtc.com/latest.js"></script> 
+  <script>
+var webrtc = new WebRTC({
+    // the id of (or actual element) to hold "our" video
+    localVideoEl: 'localVideo',
+ 
+    // the id of or actual element that will hold remote videos
+    remoteVideosEl: 'remoteVideos',
+ 
+     // immediately ask for camera access
+    autoRequestMedia: true
+});
+
+// we have to wait until it's ready
+webrtc.on('readyToCall', function () {
+    // you can name it anything
+    webrtc.joinRoom('your awesome room name');
+});
+</script>
+</head>
+
+<body>
+  <div id="localVideo"></div>
+  <div id="remoteVideos"></div>
+  {{> messages}}
+  {{> entryfield}} 
+</body>
+
+<template name="entryfield">
+	<input type="text" id="name" placeholder="Nick name" />
+	<input type="text" id="message" placeholder="Your Message" />
+</template>
+
+<template name="messages">
+    <p>
+        {{#each messages}}
+            <p><strong>{{hours}}:{{minutes}} {{name}}:</strong></p>&nbsp;
+             {{message}}<br>
+        {{/each}}
+    </p>
+</template>
