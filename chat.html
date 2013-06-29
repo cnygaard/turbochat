@@ -1,6 +1,8 @@
 <head>
   <title>Lens chat</title>
-  <script src="http://simplewebrtc.com/latest.js"></script> 
+<!-- <script src="http://simplewebrtc.com/latest.js"></script> -->
+  <script src="SimpleWebRTC/latest.js"></script>
+  <script src="http://localhost:3000"></script> 
   <script>
 var webrtc = new WebRTC({
     // the id of (or actual element) to hold "our" video
@@ -11,6 +13,8 @@ var webrtc = new WebRTC({
  
      // immediately ask for camera access
     autoRequestMedia: true
+
+    
 });
 
 // we have to wait until it's ready
@@ -21,11 +25,30 @@ webrtc.on('readyToCall', function () {
 </script>
 </head>
 
+
+
 <body>
-  <div id="localVideo"></div>
-  <div id="remoteVideos"></div>
-  {{> messages}}
-  {{> entryfield}} 
+
+   <div class="container">
+
+      <div class="masthead">
+        <h3 class="muted">Turbo Chat</h3>
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="container">
+              <ul class="nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+              </ul>
+            </div>
+          </div>
+        </div><!-- /.navbar -->
+      </div>
+      <div id="localVideo">localvideo</div>
+      <div id="remoteVideos">remotevideo</div>
+      <div id="messages">{{> messages}}</div>
+      <div id="entryfield">{{> entryfield}}</div> 
+</div>
 </body>
 
 <template name="entryfield">

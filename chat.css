@@ -6,5 +6,27 @@ p {
 input#message
 {
 	width: 400px;
-	font-family: verdana;
+//	font-family: verdana;
+}
+
+div#localVideo
+{
+	float: left;
+}
+
+div#remoteVideos
+{
+	float: left;
+	background-color: red;
+}
+
+div#messages
+{
+	float: bottom;
+	clear:both;
+}
+
+div#entryfield
+{
+//	float: right;
 }

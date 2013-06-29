@@ -1,7 +1,6 @@
 Messages = new Meteor.Collection('messages');
+// Empty the chat log/db Messages.remove({});
 
-
-//Messages.remove({});
 if (Meteor.isClient) 
 {
     Template.messages.messages = function()
@@ -15,6 +14,7 @@ Template.entryfield.events = {
       // Submit the form
       var name = document.getElementById('name');
       var message = document.getElementById('message');
+      var file = document.getElementById('file');
       var date = new Date(Date.now());
       // hours part from the timestamp
       var hours = date.getHours();
@@ -39,5 +39,5 @@ Template.entryfield.events = {
 }
 
 if (Meteor.isServer) {
-  //Messages.remove({});
+
 }
