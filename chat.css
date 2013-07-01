@@ -5,8 +5,12 @@ p {
 
 input#message
 {
-	width: 400px;
-//	font-family: verdana;
+	width: 72%;
+}
+
+input#name
+{
+	width: 22%;
 }
 
 div#localVideo

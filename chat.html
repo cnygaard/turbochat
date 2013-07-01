@@ -1,7 +1,6 @@
 <head>
   <title>Lens chat</title>
-<!-- <script src="http://simplewebrtc.com/latest.js"></script> -->
-  <script src="SimpleWebRTC/latest.js"></script>
+  <script src="http://simplewebrtc.com/latest.js"></script> 
   <script src="http://localhost:3000"></script> 
   <script>
 var webrtc = new WebRTC({
@@ -44,12 +43,19 @@ webrtc.on('readyToCall', function () {
           </div>
         </div><!-- /.navbar -->
       </div>
-      <div id="localVideo">localvideo</div>
-      <div id="remoteVideos">remotevideo</div>
+      <div id="localVideo"></div>
+      <div id="remoteVideos"></div>
       <div id="messages">{{> messages}}</div>
       <div id="entryfield">{{> entryfield}}</div> 
+      <div id="startvideochat">{{> startvideochat}}</div>
 </div>
 </body>
+
+<template name="startvideochat">
+  <div class="form-actions">
+    <button type="submit" class="btn btn-primary">Start video chat</button>
+  </div>
+</template>
 
 <template name="entryfield">
 	<input type="text" id="name" placeholder="Nick name" />
@@ -60,7 +66,7 @@ webrtc.on('readyToCall', function () {
     <p>
         {{#each messages}}
             <p><strong>{{hours}}:{{minutes}} {{name}}:</strong></p>&nbsp;
-             {{message}}<br>
+            {{message}}<br>
         {{/each}}
     </p>
 </template>
