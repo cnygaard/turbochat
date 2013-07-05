@@ -8,6 +8,10 @@ if (Meteor.isClient)
       return Messages.find({}, { sort: { time: 1 }});
     }
 
+//
+//00:20 mizzao: $messages = $(".messages")
+//00:20 mizzao:    $messages.scrollTop $messages[0].scrollHeight
+
   Template.entryfield.events = 
   {
     "keydown #message": function(event)

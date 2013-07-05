@@ -1,7 +1,7 @@
 <head>
-  <title>Lens chat</title>
-  <script src="http://simplewebrtc.com/latest.js"></script> 
-  <script src="http://localhost:3000"></script> 
+  <title>Turbo Chat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <script src="http://simplewebrtc.com/latest.js"></script> 
   <script>
 var webrtc = new WebRTC({
     // the id of (or actual element) to hold "our" video
@@ -24,12 +24,9 @@ webrtc.on('readyToCall', function () {
 </script>
 </head>
 
-
-
 <body>
-
-   <div class="container">
-
+  <div class="container-fluid">
+    <span class="visible-desktop hidden-phone hidden-tablet"> 
       <div class="masthead">
         <h3 class="muted">Turbo Chat</h3>
         <div class="navbar">
@@ -43,12 +40,15 @@ webrtc.on('readyToCall', function () {
           </div>
         </div><!-- /.navbar -->
       </div>
+      </span>
       <div id="localVideo"></div>
       <div id="remoteVideos"></div>
       <div id="messages">{{> messages}}</div>
       <div id="entryfield">{{> entryfield}}</div> 
-      <div id="startvideochat">{{> startvideochat}}</div>
-</div>
+      <span class="visible-desktop hidden-phone hidden-tablet"> 
+        <div id="startvideochat">{{> startvideochat}}</div>
+      </span>
+  </div>
 </body>
 
 <template name="startvideochat">

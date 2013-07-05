@@ -3,6 +3,15 @@ p {
 	font-family: verdana;
 }
 
+@media (max-width: 767px) {
+        /* Enable use of floated navbar text */
+        .navbar-text.pull-right {
+          float: none;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+}
+
 input#message
 {
 	width: 72%;
