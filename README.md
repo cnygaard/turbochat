@@ -2,6 +2,9 @@ Turbo Chat v0.1
 ---------------
 
 A chat application written in Meteor uses bootstrap, simplewebrtc. 
+Currently chat scales for use between PC, surf pad and phones.
+
+Bugs: videochat does not work. profile page not implemented
 
 Install meteor
 --------------
