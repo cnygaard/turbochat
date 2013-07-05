@@ -9,9 +9,9 @@ curl https://install.meteor.com | /bin/sh
 
 Run chat application
 --------------------
-cd chat
-mrt
+  cd chat
+  mrt
 
-In your browser
+In your web browser
 ---------------
 connect to http://localhost:3000
