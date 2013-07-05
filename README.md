@@ -1,17 +1,17 @@
 Turbo Chat v0.1
 ---------------
 
-A chat application written in Meteor.
+A chat application written in Meteor uses bootstrap, simplewebrtc. 
 
 Install meteor
 --------------
-curl https://install.meteor.com | /bin/sh
+    curl https://install.meteor.com | /bin/sh
 
 Run chat application
 --------------------
-  cd chat
-  mrt
+    cd chat
+    meteor
 
 In your web browser
----------------
-connect to http://localhost:3000
+-------------------
+    connect to http://localhost:3000
